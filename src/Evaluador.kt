@@ -16,5 +16,5 @@ class Evaluador {
 fun main() {
     val eval = Evaluador()
     eval.calificacion = 8
-    println(eval.resultado()) // Bueno
+    println(eval.resultado())
 }

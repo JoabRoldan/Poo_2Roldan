@@ -1,14 +1,22 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+class Propina {
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+    var consumo: Double = 0.0
+
+    fun calcularPropina(): Double {
+        return when {
+            consumo < 500 -> consumo * 0.05
+            consumo in 500.0..999.99 -> consumo * 0.10
+            else -> consumo * 0.15
+        }
     }
+
+    fun totalConPropina(): Double {
+        return consumo + calcularPropina()
+    }
+}
+fun main() {
+    val cuenta = Propina()
+    cuenta.consumo = 800.0
+    println(cuenta.calcularPropina())
+    println(cuenta.totalConPropina())
 }

@@ -14,5 +14,5 @@ class ValidadorEdad {
 fun main() {
     val persona = ValidadorEdad()
     persona.edad = 70
-    println(persona.categoria()) // Adulto mayor
+    println(persona.categoria())
 }

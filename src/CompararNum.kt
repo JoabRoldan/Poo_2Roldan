@@ -15,5 +15,5 @@ fun main() {
     val comp = Comparador()
     comp.numero1 = 10
     comp.numero2 = 10
-    println(comp.comparar()) // Son iguales
+    println(comp.comparar())
 }
